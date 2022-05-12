@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">Street Groups Task</h1>
+
+    <table class="center">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Initial</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in peoples %}
+                <tr>
+                    <th>{{ person.title }}</th>
+                    <th>{{ person.initial }}</th>
+                    <th>{{ person.first_name }}</th>
+                    <th>{{ person.last_name }}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+{% endblock %}
